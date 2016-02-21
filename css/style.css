@@ -5,12 +5,12 @@ head,body{
 }
 
 #logotipo{
-	height:97px;
-	width:303px;
-	background-image: url(../images/logo_monkeds.png);
+	height:90px;
+	width:320px;
+	background-image: url(../images/logo_monkeds2.png);
 	left:50%;
 	top:50%;
-	margin-top:-50px;
-	margin-left:-158px;
+	margin-top:-45px;
+	margin-left:-160px;
 	position:absolute;
 }
