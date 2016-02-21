@@ -1,0 +1,16 @@
+head,body{
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+#logotipo{
+	height:97px;
+	width:303px;
+	background-image: url(../images/logo_monkeds.png);
+	left:50%;
+	top:50%;
+	margin-top:-50px;
+	margin-left:-158px;
+	position:absolute;
+}
