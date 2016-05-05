@@ -12,8 +12,13 @@
 
 html {
     color: #222;
-    font-size: 1em;
+    font-size: 12px;
     line-height: 1.4;
+}
+
+body{
+  background-color: #222;
+  background-image: url(../img/back/grey_variations.png)
 }
 
 /*
@@ -95,16 +100,86 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+#wrapper{
+    width: 1000px;
+    background-color: #fff;
+    border-radius: 3px;
+    height: 600px;
+    box-shadow: 0px 6px 10px rgba(0,0,0,0.3);
+    position: absolute;
+    margin-top:-300px;
+    margin-left: -500px;
+    top:50%;
+    left: 50%;
+    position: relative;
+}
+
+
+#wrapper>nav{
+    font-size: 1em;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    box-shadow: none;
+}
+
+#wrapper>footer{
+    width: 100%; 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    text-align: center; 
+    border-top: 1px solid #ddd; 
+    color: #888;
+    bottom: 0;
+    position: absolute;
+    height: 30px;
+    line-height: 30px;
+    font-size: 0.9em;
+}
+
+#wrapper>#content{
+    width: 100%;
+    position: relative;
+    height: 530px;
+}
+
+#wrapper>#content>#left_content{
+    width: 200px;
+    position: absolute;
+    height: 100%;
+}
+
+#wrapper>#content>#left_content>.card_person{
+    padding:0 !important;
+    margin:0 !important;
+    border-right: 1px solid #DDD !important;
+    box-shadow: none;
+    border-radius:0;
+    height: 100%;
+}
 
 
 
+#wrapper>#content>#center_content{
+    width: 800px;
+    left: 200px;
+    position: absolute;
+    padding: 20px;
+}
 
+#wrapper>#content>#center_content>.item_info{
+    padding-bottom: 20px;
+}
+#wrapper>#content>#center_content>:last-child {
+    padding-bottom: 0   ;
+}
 
-
-
-
-
-
+#wrapper>#content>#center_content>.item_info h1{
+    font-size: 1.1em;    
+}
 
 
 

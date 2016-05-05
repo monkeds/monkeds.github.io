@@ -11,8 +11,16 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
+        <link href="semantic/semantic.min.css" rel="stylesheet"></link>
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+
+        
+
+        
+
+
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -20,9 +28,136 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div id="wrapper">
+            <nav class="ui menu">
+                <div class="item">EDGAR</div>
+                <a class="item blue active" href="javascript:void(0)"> 
+                    <i class="user icon"></i> PERFIL
+                </a> 
+                <a class="item green" href="javascript:void(0)"> 
+                    <i class="student icon"></i> FORMACIÓN
+                </a> 
+                <a class="item red" href="javascript:void(0)"> 
+                    <i class="building outline icon"></i> EXPERIENCIA
+                </a> 
+                <a class="item" href="javascript:void(0)"> 
+                    <i class="trophy icon"></i> CONOCIMIENTOS
+                </a>
 
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+                <div class="menu right">
+                    <div class="ui pointing dropdown link item">
+                        <div class="text">
+                            <i class="chevron down icon"></i>
+                        </div>
+                        <div class="menu">
+                            <div class="header">GESTIONAR</div>
+                            <div class="item">CONTACTAR</div>
+                            <div class="divider"></div>
+                            <div class="header">EXPORTAR</div>
+                            <a class="item"><i class="file word blue outline icon"></i>
+                                WORD</a> <a class="item "><i class="file pdf red outline icon"></i>
+                                PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+            <div id="content">
+                <section id="left_content">
+                    <article class="card_person ui card">
+                        <div class="image">
+                            <img src="img/wireframe/white-image.png">
+                        </div>
+
+                        <div class="content">
+                            <a class="header">Edgar Medina Vargas</a>
+                            <div class="meta">
+                                <span class="date">Analista Desarrollador de Sistemas</span>
+                            </div>
+                            <div class="description">Me considero una persona con mucha
+                                capacidad para solucionar problemas, tengo facilidad de aprendizaje y
+                                 me gustan los retos. Busco siempre mejorar a nivel
+                                personal y profesional. </div>
+                        </div>
+                        <div class="extra content">
+                            <i class="user icon"></i> 26 Años
+                        </div>
+                    </article>
+                </section>
+
+
+                <section id="center_content">
+                    <article class="item_info">
+                        <h1 class="ui dividing header">Datos Personales</h1>
+                        <table class="ui definition table">
+                            <tbody>
+                                <tr>
+                                    <td class="three wide column">DNI</td>
+                                    <td>46326976</td>
+                                </tr>
+                                <tr>
+                                    <td>Nacimiento</td>
+                                    <td>Lima, 06 de Marzo de 1990</td>
+                                </tr>
+                                <tr>
+                                    <td>Edad</td>
+                                    <td>25 años</td>
+                                </tr>
+                                <tr>
+                                    <td>Dirección</td>
+                                    <td>Mz A Lt 4 Santa Rosa del Sauce – San Juan de Lurigancho</td>
+                                </tr>
+                                <tr>
+                                    <td>Estado Civil</td>
+                                    <td>*Conviviente</td>
+                                </tr>
+                                <tr>
+                                    <td>Nacionalidad</td>
+                                    <td>Peruana</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>             
+
+
+                    <article class="item_info">
+                        <h1 class="ui dividing header">Contacto</h1>
+
+                        <table class="ui definition table">
+                            <tbody>
+                                <tr>
+                                    <td class="three wide column">Celular</td>
+                                    <td>955 260 648</td>
+                                </tr>
+                                <tr>
+                                    <td>Teléfono fijo</td>
+                                    <td>375 1544</td>
+                                </tr>
+                                <tr>
+                                    <td>Correo</td>
+                                    <td>medient@hotmail.com / medientg@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Github</td>
+                                    <td><a href="https://github.com/monkar">https://github.com/monkar</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+
+                </section>
+            </div>
+            <footer>
+                MCards 2016 © Todos los derechos reservados
+            </footer>
+        </div>
+
+
+
+
+
+        <script src="js/jquery-1.12.0.min.js"></script>
+        <script src="semantic/semantic.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
