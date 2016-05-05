@@ -18,7 +18,8 @@ html {
 
 body{
   background-color: #222;
-  background-image: url(../img/back/grey_variations.png)
+  background-image: url(../img/back/grey_variations.png);
+  overflow:hidden;
 }
 
 /*
@@ -183,6 +184,26 @@ textarea {
 
 
 
+
+
+
+
+
+
+
+
+
+#under_construction{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: 200px;
+    background-image: url(../img/wireframe/under_construction.png);
+    background-size: 200px;
+}
 
 
 
