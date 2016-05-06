@@ -153,6 +153,12 @@ textarea {
     height: 100%;
 }
 
+#wrapper>#content>#left_content>nav{
+    width: 100%;
+    font-size: 1em;
+}
+
+
 #wrapper>#content>#left_content>.card_person{
     padding:0 !important;
     margin:0 !important;
@@ -169,22 +175,31 @@ textarea {
     left: 200px;
     position: absolute;
     padding: 20px;
+    max-height: 100%;
+    overflow: auto;
 }
 
-#wrapper>#content>#center_content>.item_info{
-    padding-bottom: 20px;
+#wrapper>#content>#center_content .item_info{
+    margin-bottom: 20px;
 }
-#wrapper>#content>#center_content>:last-child {
-    padding-bottom: 0   ;
+#wrapper>#content>#center_content .item_info:last-child {
+    margin-bottom: 0   ;
 }
 
-#wrapper>#content>#center_content>.item_info h1{
+#wrapper>#content>#center_content .item_info h1{
     font-size: 1.1em;    
 }
 
+#wrapper>#content>#center_content .item_info h1 .date{
+    float:right;
+    font-size:12px;
+}
 
-
-
+#wrapper>#content>#center_content .item_info h2{
+    font-size: 1em;    
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+}
 
 
 

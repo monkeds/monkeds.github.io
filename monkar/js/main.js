@@ -20,4 +20,10 @@ function loadComponents(){
 	
 	$('.progress').progress();
 
+
+	//menus laterales
+	$('#wrapper>#content>#left_content>nav .item').tab({
+		context:$("#wrapper>#content>#center_content")
+	});
+
 }
