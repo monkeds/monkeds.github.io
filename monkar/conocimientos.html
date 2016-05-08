@@ -12,7 +12,7 @@
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link href="semantic/semantic.min.css" rel="stylesheet"></link>
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main.min.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
 
@@ -31,7 +31,7 @@
         <div id="wrapper">
             <nav class="ui menu">
                 <div class="item">EDGAR</div>
-                <a class="item blue active" href="perfil.html"> 
+                <a class="item blue " href="perfil.html"> 
                     <i class="user icon"></i> PERFIL
                 </a> 
                 <a class="item green" href="formacion.html"> 
@@ -40,7 +40,7 @@
                 <a class="item red" href="experiencia.html"> 
                     <i class="building outline icon"></i> EXPERIENCIA
                 </a> 
-                <a class="item" href="conocimientos.html"> 
+                <a class="item purple active" href="conocimientos.html"> 
                     <i class="trophy icon"></i> CONOCIMIENTOS
                 </a>
 
@@ -68,84 +68,88 @@
             </nav>
             
             <div id="content">
-                <section id="left_content">
-                    <article class="card_person ui card">
-                        <div class="image">
-                            <img src="img/wireframe/portrait.png">
-                        </div>
+                <section id="center_content" class="all_whidth">
+                   <div class="ui three column grid">
 
-                        <div class="content">
-                            <a class="header">Edgar Medina Vargas</a>
-                            <div class="meta">
-                                <span class="date">Analista Desarrollador de Sistemas</span>
+                        <div class="ui horizontal divider">Lenguajes</div>
+
+                        <article class="column item_info">
+                            <div class="ui active indicating progress small"  data-percent="80">
+                              <div class="bar"></div>
+                              <div class="label">JAVA</div>
                             </div>
-                            <div class="description">Apasionado de las nuevas tecnologías. Fiel partidario del cumplimiento de estándares, buenas prácticas y desarrollo de código limpio. Me gusta aprender, innovar y plasmar soluciones en código. </div>
-                        </div>
-                        <div class="extra content">
-                            <i class="user icon"></i> 26 Años
-                        </div>
-                    </article>
-                </section>
+                        </article>
 
+                        <article class="column item_info">
+                            <div class="ui active indicating progress small"  data-percent="50">
+                              <div class="bar"></div>
+                              <div class="label">PHP</div>
+                            </div>
+                        </article>
 
-                <section id="center_content">
-                    <article class="item_info">
-                        <h1 class="ui dividing header">Datos Personales</h1>
-                        <table class="ui definition table">
-                            <tbody>
-                                <tr>
-                                    <td class="three wide column">DNI</td>
-                                    <td>46326976</td>
-                                </tr>
-                                <tr>
-                                    <td>Nacimiento</td>
-                                    <td>Lima, 06 de Marzo de 1990</td>
-                                </tr>
-                                <tr>
-                                    <td>Edad</td>
-                                    <td>26 años</td>
-                                </tr>
-                                <tr>
-                                    <td>Dirección</td>
-                                    <td>Mz A Lt 4 Santa Rosa del Sauce – San Juan de Lurigancho</td>
-                                </tr>
-                                <tr>
-                                    <td>Estado Civil</td>
-                                    <td>*Conviviente</td>
-                                </tr>
-                                <tr>
-                                    <td>Nacionalidad</td>
-                                    <td>Peruana</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </article>             
+                        <article class="column item_info">
+                            <div class="ui active indicating progress small"  data-percent="30">
+                              <div class="bar"></div>
+                              <div class="label">.NET</div>
+                            </div>
+                        </article>
 
+                        <article class="column item_info">
+                            <div class="ui active indicating progress small"  data-percent="70">
+                              <div class="bar"></div>
+                              <div class="label">JS, CSS, HTML5</div>
+                            </div>
+                        </article>
 
-                    <article class="item_info">
-                        <h1 class="ui dividing header">Contacto</h1>
+                        <article class="column item_info">
+                            <div class="ui active indicating progress small"  data-percent="50">
+                              <div class="bar"></div>
+                              <div class="label">SQL</div>
+                            </div>
+                        </article>
 
-                        <table class="ui definition table">
-                            <tbody>
-                                <tr>
-                                    <td class="three wide column">Celular</td>
-                                    <td>955 260 648</td>
-                                </tr>
-                                <tr>
-                                    <td>Teléfono fijo</td>
-                                    <td>375 1544</td>
-                                </tr>
-                                <tr>
-                                    <td>Correo</td>
-                                    <td>medient@hotmail.com / medientg@gmail.com</td>
-                                </tr>
-                                <tr>
-                                    <td>Github</td>
-                                    <td><a href="https://github.com/monkar">https://github.com/monkar</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </article>
+                        <article class="column item_info">
+                            <div class="ui active indicating progress small"  data-percent="40">
+                              <div class="bar"></div>
+                              <div class="label">ANDROID</div>
+                            </div>
+                        </article>
+
+                        <div class="ui horizontal divider">Frameworks</div>
+
+                        <article class="column item_info">
+                            <div class="ui active indicating progress small"  data-percent="70">
+                              <div class="bar"></div>
+                              <div class="label">SPRING 3</div>
+                            </div>
+                        </article>
+
+                        <article class="column item_info">
+                            <div class="ui active indicating progress small"  data-percent="80">
+                                <div class="bar"></div>
+                                <div class="label">JSF(Primefaces)
+                                    <a class="mark" href="http://www.proprofs.com/quiz-school/usercertificate.php?id=55007937&qid=588034&uname=Edgar%20Medina%20Vargas" target="_blank" title="Certificado"><i class="certificate icon blue big"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="column item_info">
+                            <div class="ui active indicating progress small"  data-percent="70">
+                              <div class="bar"></div>
+                              <div class="label">HIBERNATE</div>
+                            </div>
+                        </article>
+
+                        <article class="column item_info">
+                            <div class="ui active indicating progress small"  data-percent="60">
+                              <div class="bar"></div>
+                              <div class="label">MYBATIS</div>
+                            </div>
+                        </article>
+                       
+
+                   </div>                               
 
                 </section>
             </div>
@@ -156,9 +160,6 @@
         </div>
 
 
-
-
-        
         <div id="contactModal" class="ui modal">
             <div class="header">Contactar</div>
             <div class="content">
@@ -178,11 +179,6 @@
                 </div>
           </div>
         </div>
-
-
-
-
-
 
 
         <script src="js/jquery-1.12.0.min.js"></script>

@@ -10,9 +10,9 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/normalize.min.css">
         <link href="semantic/semantic.min.css" rel="stylesheet"></link>
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main.min.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
 
@@ -37,10 +37,10 @@
                 <a class="item green" href="formacion.html"> 
                     <i class="student icon"></i> FORMACIÓN
                 </a> 
-                <a class="item red" href="javascript:void(0)"> 
+                <a class="item red" href="experiencia.html"> 
                     <i class="building outline icon"></i> EXPERIENCIA
                 </a> 
-                <a class="item" href="javascript:void(0)"> 
+                <a class="item" href="conocimientos.html"> 
                     <i class="trophy icon"></i> CONOCIMIENTOS
                 </a>
 
@@ -51,12 +51,17 @@
                         </div>
                         <div class="menu">
                             <div class="header">GESTIONAR</div>
-                            <div class="item">CONTACTAR</div>
+                            <div class="item" id="btnContact">CONTACTAR</div>
                             <div class="divider"></div>
                             <div class="header">EXPORTAR</div>
-                            <a class="item"><i class="file word blue outline icon"></i>
-                                WORD</a> <a class="item "><i class="file pdf red outline icon"></i>
-                                PDF</a>
+                            <a class="item" href="files/CV_Edgar_Medina_Vargas.odt" target="_blank">
+                                <i class="file word blue outline icon"></i>
+                                WORD
+                            </a> 
+                            <a class="item " href="files/CV_Edgar_Medina_Vargas.pdf" target="_blank">
+                                <i class="file pdf red outline icon"></i>
+                                PDF
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -66,7 +71,7 @@
                 <section id="left_content">
                     <article class="card_person ui card">
                         <div class="image">
-                            <img src="img/wireframe/white-image.png">
+                            <img src="img/wireframe/portrait.png">
                         </div>
 
                         <div class="content">
@@ -74,10 +79,7 @@
                             <div class="meta">
                                 <span class="date">Analista Desarrollador de Sistemas</span>
                             </div>
-                            <div class="description">Me considero una persona con mucha
-                                capacidad para solucionar problemas, tengo facilidad de aprendizaje y
-                                 me gustan los retos. Busco siempre mejorar a nivel
-                                personal y profesional. </div>
+                            <div class="description">Apasionado de las nuevas tecnologías. Fiel partidario del cumplimiento de estándares, buenas prácticas y desarrollo de código limpio. Me gusta aprender, innovar y plasmar soluciones en código. </div>
                         </div>
                         <div class="extra content">
                             <i class="user icon"></i> 26 Años
@@ -153,12 +155,24 @@
 
         </div>
 
-
-
-
-        <!-- RETIRAR AL CULMINAR -->
-        <div id="under_construction">
-            
+        <div id="contactModal" class="ui modal">
+            <div class="header">Contactar</div>
+            <div class="content">
+                <div class="ui form">                    
+                    <div class="field">
+                        <label><i class="mail icon"></i>Email:</label> medient@hotmail.com / medientg@gmail.com
+                    </div>
+                    <div class="field">
+                        <label><i class="phone icon"></i>  <i class="whatsapp icon"></i>Celular / Whatsapp</label> 955 260 648
+                    </div>                    
+                    <div class="field">
+                        <label><i class="linkedin icon"></i></i>Linkedin</label><a href="https://www.linkedin.com/in/edgar-medina-vargas-6b4768a3">https://www.linkedin.com/in/edgar-medina-vargas-6b4768a3</a>
+                    </div>
+                    <div class="field">
+                        <label><i class="git icon"></i></i>Github</label><a href="https://github.com/monkar">https://github.com/monkar</a>
+                    </div>
+                </div>
+          </div>
         </div>
 
 

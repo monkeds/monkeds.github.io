@@ -9,7 +9,6 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
 html {
     color: #222;
     font-size: 12px;
@@ -17,10 +16,11 @@ html {
 }
 
 body{
-  background-color: #222;
+  background-color: #484F59;;
   background-image: url(../img/back/grey_variations.png);
   overflow:hidden;
 }
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -97,6 +97,50 @@ textarea {
     padding: 0.2em 0;
 }
 
+
+/*
+*LISTAS 
+*/
+ul , ul>li,  
+.ui.list .item{
+    list-style-type: none !important;
+}
+
+ul>li::before { 
+    content: none !important;
+}
+
+/*
+PROGRESSBAR
+*/
+.progress>.label{
+    text-align: left !important;
+    font-size: 1.1em !important;
+}
+
+.progress>.label>.mark{
+    float: right;
+    height: 2em;
+    width: 2em;
+    margin-top: -8px;
+}
+
+.progress>.label>.mark>.icon{
+}
+
+
+
+
+/*MODAL*/
+#contactModal{
+    width: 400px;
+    margin-left: -200px;
+}
+#contactModal .field{
+    font-size: 1.2em !important;
+}
+
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -124,6 +168,7 @@ textarea {
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
     box-shadow: none;
+    height: 40px;
 }
 
 #wrapper>footer{
@@ -179,15 +224,23 @@ textarea {
     overflow: auto;
 }
 
+#wrapper>#content>#center_content.all_whidth{
+    width: 100%;
+    margin: 0;
+    left: 0;
+}
+
+
 #wrapper>#content>#center_content .item_info{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    font-size: 0.9em;
 }
 #wrapper>#content>#center_content .item_info:last-child {
     margin-bottom: 0   ;
 }
 
 #wrapper>#content>#center_content .item_info h1{
-    font-size: 1.1em;    
+    font-size: 1.2em;    
 }
 
 #wrapper>#content>#center_content .item_info h1 .date{
@@ -216,7 +269,7 @@ textarea {
     left: 50%;
     margin-left: -100px;
     margin-top: 200px;
-    background-image: url(../img/wireframe/under_construction.png);
+    /**background-image: url(../img/wireframe/under_construction.png);*/
     background-size: 200px;
 }
 
