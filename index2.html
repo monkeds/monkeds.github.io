@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY BABY BLUE</title>
+</head>
+<body>
+    
+    
+    <button id="clickme">CLICKEAME BLUE!</button>
+    
+    <div class="main-wrapper"></div>
+
+     
+</body>
+
+<style>
+
+   .tshirt-wrap{
+
+    margin: 10px;
+    padding: 20px;
+    position: relative;
+    display: inline-block;
+    --size: 400px;
+    width: var(--size);
+    height: var(--size);
+    background-color: red;
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='29' height='50.115' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M14.498 16.858L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z'  stroke-width='1' stroke='hsla(339, 0%, 0%, 0.12)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    border: 1px dashed black;
+    }
+
+    .layer {
+    --size: 400px;
+    display: inline-block;
+    width: var(--size);
+    height: var(--size);
+    
+    -webkit-mask-size: cover;
+    mask-size: cover;
+
+    position: absolute;
+    }
+
+    .polo .layer_sombra {
+        background-image: black;
+        -webkit-filter: drop-shadow( 6px 6px 4px rgba(0, 0, 0, 0.3));
+        filter: drop-shadow( 6px 6px 4px rgba(0, 0, 0, 0.3));
+    }
+
+    .polo .layer_fondo {
+        -webkit-mask-image: url(https://monkeds.github.io/images/fondo_re.svg);
+        mask-image: url(https://monkeds.github.io/images/fondo_re.svg);
+    }
+
+    .polo .layer_contorno {
+        background: black;
+        -webkit-mask-image: url(https://monkeds.github.io/images/borde_re.svg);
+        mask-image: url(https://monkeds.github.io/images/borde_re.svg);
+    }
+    .polo .layer_cuello {
+        -webkit-mask-image: url(https://monkeds.github.io/images/cuello_re.svg);
+        mask-image: url(https://monkeds.github.io/images/cuello_re.svg);
+    }
+    .layer_mangas {
+        -webkit-mask-image: url(https://monkeds.github.io/images/mangas_re.svg);
+        mask-image: url(https://monkeds.github.io/images/mangas_re.svg);
+    }
+
+    .layer_mangas_altas {
+        -webkit-mask-image: url(https://monkeds.github.io/images/mangas_altas_re.svg);
+        mask-image: url(https://monkeds.github.io/images/mangas_altas_re.svg);
+    }
+
+
+
+    /*POLO CAMISERO*/
+
+    .polo-camisero .layer_sombra {
+        background-image: black;
+        -webkit-filter: drop-shadow( 6px 6px 4px rgba(0, 0, 0, 0.3));
+        filter: drop-shadow( 6px 6px 4px rgba(0, 0, 0, 0.3));
+    }
+
+    .polo-camisero .layer_fondo {
+        -webkit-mask-image: url(https://monkeds.github.io/images/fondo_cam_re.svg);
+        mask-image: url(https://monkeds.github.io/images/fondo_cam_re.svg);
+    }
+
+    .polo-camisero .layer_contorno {
+        background: black;
+        -webkit-mask-image: url(https://monkeds.github.io/images/borde_cam_re.svg);
+        mask-image: url(https://monkeds.github.io/images/borde_cam_re.svg);
+    }
+
+    .polo-camisero .layer_cuello {
+        -webkit-mask-image: url(https://monkeds.github.io/images/cuello_cam_re.svg);
+        mask-image: url(https://monkeds.github.io/images/cuello_cam_re.svg);
+    }
+
+
+
+    .layer_estampado_frontal {
+        background-image: url(https://monkeds.github.io/images/avengers.png);
+        background-size: 120px 60px;
+        width: 120px;
+        height: 60px;
+        top: 50%;
+        left: 50%;
+        margin-top: -80px;
+        margin-left: -56px;
+    }
+
+    .layer_estampado_corazon {
+        background-image: url(https://monkeds.github.io/images/avengers.png);
+        background-size: 40px 14px;
+        
+        width: 40px;
+        height: 14px;
+        top: 50%;
+        left: 50%;
+        margin-top: -60px;
+        margin-left: 32px;
+    }
+
+</style>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script
+  src="https://monkeds.github.io/images/pantone-numbers.js"></script>
+
+
+
+  <script>
+
+
+function hexColorDelta(hex1, hex2) {
+    // get red/green/blue int values of hex1
+    var r1 = parseInt(hex1.substring(0, 2), 16);
+    var g1 = parseInt(hex1.substring(2, 4), 16);
+    var b1 = parseInt(hex1.substring(4, 6), 16);
+    // get red/green/blue int values of hex2
+    var r2 = parseInt(hex2.substring(0, 2), 16);
+    var g2 = parseInt(hex2.substring(2, 4), 16);
+    var b2 = parseInt(hex2.substring(4, 6), 16);
+    // calculate differences between reds, greens and blues
+    var r = 255 - Math.abs(r1 - r2);
+    var g = 255 - Math.abs(g1 - g2);
+    var b = 255 - Math.abs(b1 - b2);
+    // limit differences between 0 and 1
+    r /= 255;
+    g /= 255;
+    b /= 255;
+    // 0 means opposit colors, 1 means same colors
+    return (r + g + b) / 3;
+}
+
+
+function getRandomPantoneRGB(){
+    const keys = Object.keys(pantoneColors)
+    // Generate random index based on number of keys
+    const randIndex = Math.floor(Math.random() * keys.length)
+    // Select a key from the array of keys using the random index
+    const randKey = keys[randIndex]
+    // Use the key to get the corresponding name from the "names" object
+    const name = pantoneColors[randKey]
+    return name.hex;
+}
+
+    function randomTrueFalse(){
+        return Math.random() < 0.5;
+    }
+
+    function pintarCuello(indicador){
+        //if(randomTrueFalse())
+            pintarRandom(indicador+">.layer_cuello");
+    }
+
+    function pintarMangas(indicador){
+        if(randomTrueFalse()){
+            if(randomTrueFalse()){
+                pintarRandom(indicador+">.layer_mangas");
+            }else{
+                pintarRandom(indicador+">.layer_mangas_altas");
+            }
+        }
+            
+    }
+
+    function pintarFondo(indicador){
+
+
+        
+        if(randomTrueFalse()){
+            pintarRandom(indicador+">.layer_fondo");
+        }else{
+            if(randomTrueFalse()){
+                pintarRandomGradient(indicador+">.layer_fondo");
+            }else{
+                if(randomTrueFalse()){
+                    pintarRandomGradient(indicador+">.layer_fondo");
+                }else{
+                    pintarRandomPattern(indicador+">.layer_fondo");
+                } 
+            } 
+        }
+        
+        
+    }
+
+    function pintarRandom(indicador){
+        $(indicador).css({'background':'#'+getRandomPantoneRGB()});
+    }
+
+
+    function pintarRandomPattern(indicador){
+        $(indicador).css({'background-image':'url(https://monkeds.github.io/images/dog_pattern.jpeg)','background-repeat': 'repeat', 'background-size': '80px 80px'});
+        
+    }
+
+    function pintarRandomGradient(indicador){
+        var firstColor = 'FFFFFF';
+        if(randomTrueFalse())
+            firstColor = getRandomPantoneRGB();
+
+        var secondColor = getRandomPantoneRGB();
+
+         
+        while(hexColorDelta(firstColor,secondColor)<0.8){
+            secondColor = getRandomPantoneRGB();
+        }
+        console.log("EXITO "+indicador+": "+firstColor+" - "+secondColor);
+        
+        firstColor='#'+firstColor;
+        secondColor='#'+secondColor;
+        
+
+
+        if(randomTrueFalse()){
+            $(indicador).css({'background-image':'linear-gradient('+firstColor+' 0%,'+ firstColor+' 40%,'+ secondColor+' 90%)'});
+        }else{
+
+            var threeColor = getRandomPantoneRGB();
+
+            while(hexColorDelta(secondColor,threeColor)<0.9){
+                threeColor = getRandomPantoneRGB();
+            }
+            console.log("EXITO** "+indicador+": "+firstColor+" - "+secondColor+" - "+threeColor);
+            threeColor='#'+threeColor;
+
+            $(indicador).css({'background-image':'linear-gradient('+firstColor+' 0%,'+firstColor+' 45%,'+ secondColor+' 55%,'+ secondColor+' 60%,'+threeColor+' 70%,'+threeColor+' 100%)'});
+        }
+        
+    }
+
+      $(document).ready(() => {     
+    
+
+
+    $("#clickme").click(function(){
+        var finalTemplate='';
+        
+    
+        for (var i = 0; i < 20; i ++){
+
+            if(randomTrueFalse()){
+                finalTemplate = finalTemplate +  generatePoloTemplate("sample-"+i);
+            }else{
+                finalTemplate = finalTemplate +  generateCamiserTemplate("sample-"+i);
+            }
+        }
+    
+        $(".main-wrapper").html(finalTemplate);
+    
+    
+        for (var i = 0; i < 20; i ++){
+            pintarCuello("#sample-"+i);
+            pintarMangas("#sample-"+i);
+            pintarFondo("#sample-"+i);
+        }
+        
+    
+    
+    });
+    });
+
+
+    function generatePoloTemplate(id){
+        var template=`<div id=`+id+` class="tshirt-wrap polo">
+                        <img class="layer layer_sombra" src="https://monkeds.github.io/images/fondo_re.svg" />
+                        <i class="layer layer_fondo"></i>
+                        <i class="layer layer_mangas_altas"></i>
+                        <i class="layer layer_mangas"></i>
+                        <i class="layer layer_cuello"></i>
+                        <i class="layer layer_estampado_frontal"></i>
+                        <i class="layer layer_contorno"></i>
+                    </div>`;
+                    return template;
+    }
+
+    function generateCamiserTemplate(id){
+        var template=`<div id=`+id+` class="tshirt-wrap polo-camisero">
+                        <img class="layer layer_sombra" src="https://monkeds.github.io/images/fondo_cam_re.svg" />
+                        <i class="layer layer_fondo"></i>
+                        
+                        <i class="layer layer_mangas_altas"></i>
+                        <i class="layer layer_mangas"></i>
+                        <i class="layer layer_cuello"></i>
+                        <i class="layer layer_estampado_corazon"></i>
+                        <i class="layer layer_contorno"></i>
+                    </div>`;
+                    return template;
+    }
+
+    
+  </script>
+
+</html>
