@@ -296,7 +296,7 @@ function generatePoloTemplate(id){
                                 <i class="layer layer_mangas_altas"></i>
                                 <i class="layer layer_mangas"></i>
                                 <i class="layer layer_cuello"></i>
-                                <i class="layer layer_estampado_frontal"></i>
+                                <i class="layer layer_estampado_frontal align-middle"></i>
                                 <i class="layer layer_contorno"></i>
                             </div>
                             
@@ -348,7 +348,7 @@ function generateCamiseroTemplate(id){
                                     <i class="layer layer_mangas_altas"></i>
                                     <i class="layer layer_mangas"></i>
                                     <i class="layer layer_cuello"></i>
-                                    <i class="layer layer_estampado_frontal"></i>
+                                    <i class="layer layer_estampado_corazon"></i>
                                     <i class="layer layer_contorno"></i>
                                 </div>
                                 
