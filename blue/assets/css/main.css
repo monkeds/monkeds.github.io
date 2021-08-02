@@ -105,7 +105,7 @@
 
 .layer_estampado_frontal {
     /*background-image: url(https://monkeds.github.io/images/avengers.png);*/
-    background-image: url(https://www.freeiconspng.com/uploads/avengers-icon-7.png);
+    background-image: url(../media/estampado/estampado_avenger.png);
 
     
     background-size: 100% 100%;
@@ -124,7 +124,7 @@
 
 .layer_estampado_corazon {
     /*background-image: url(https://monkeds.github.io/images/avengers.png);*/
-    background-image: url(https://www.freeiconspng.com/uploads/avengers-icon-7.png);
+    background-image: url(../media/estampado/estampado_avenger.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     

@@ -100,8 +100,17 @@ function drawCloths(){
 }
  
  $(document).ready(() => {    
+    /*
+    var colors = tinycolor("#369C00").analogous(result=3);
 
+    var colorsmap = colors.map(function(t) { return t.toHexString(); });
+    console.log(colorsmap);
+
+    return;
+    */
     drawCloths();
+
+
 
     //initComponents();
 
@@ -283,13 +292,13 @@ function generateTemplate(indicator){
 
 function generatePoloTemplate(id){
     var template=`<!--begin::Col-->
-                <div id=`+id+` class="cloth polo col-md-6 col-xxl-4 ">
+                <div id=`+id+` class="cloth polo col-md-4 col-xxl-3 ">
                     <!--begin::Card-->
                     <div class="card">
                         <!--begin::Card body-->
-                        <div class=" d-flex flex-center flex-column pt-6">
+                        <div class=" d-flex flex-center flex-column pt-0" style="">
 
-                            <div class="frame mb-4">
+                            <div class="frame mb-4" style="border-top-left-radius: .85rem; border-top-right-radius: .85rem">
                                 <!--<img class="mw-100 mh-300px card-rounded-bottom" alt="" src="assets/media/illustrations/alert-2.png"/>-->
                                 <img class="layer layer_sombra" src="https://monkeds.github.io/images/fondo_re.svg" />
                                 <i class="layer layer_fondo"></i>
@@ -335,13 +344,13 @@ function generatePoloTemplate(id){
 
 function generateCamiseroTemplate(id){
     var template=`<!--begin::Col-->
-                    <div id=`+id+` class="cloth polo-camisero col-md-6 col-xxl-4 ">
+                    <div id=`+id+` class="cloth polo-camisero col-md-4 col-xxl-3 ">
                         <!--begin::Card-->
                         <div class="card">
                             <!--begin::Card body-->
-                            <div class=" d-flex flex-center flex-column pt-6">
+                            <div class=" d-flex flex-center flex-column pt-0">
 
-                                <div class="frame mb-4">
+                                <div class="frame mb-4" style="border-top-left-radius: .85rem; border-top-right-radius: .85rem">
                                     <!--<img class="mw-100 mh-300px card-rounded-bottom" alt="" src="assets/media/illustrations/alert-2.png"/>-->
                                     <img class="layer layer_sombra" src="https://monkeds.github.io/images/fondo_cam_re.svg" />
                                     <i class="layer layer_fondo"></i>
@@ -387,25 +396,27 @@ function generateCamiseroTemplate(id){
 
 /*UTILES*/
 function generateColorsPalette(){
+
+    
     var colorsPalete = [];
 
     //2 a 3 colores
-    var cantColors = 1+(Math.floor(Math.random() * 2));
+    var cantColors = 3; /*1+(Math.floor(Math.random() * 2));*/
 
-    for(var i = 0; i<= cantColors; i++){
+    for(var i = 0; i< cantColors; i++){
 
         if(i==0){
             if(randomTrueFalse()){
                 colorsPalete.push(getRandomPantone());
             }else{
-                if(randomTrueFalse()){
+                //if(randomTrueFalse()){
                     colorsPalete.push(getRandomPantone());
-                }else{
+                /*}else{
                     colorsPalete.push({
                         "name": "snow-white",
                         "hex": "f2f0eb"
                     })
-                }
+                }*/
             }
         }else if(i==1){ //buscar color similar
             var secondColor = getRandomPantone();
@@ -414,10 +425,57 @@ function generateColorsPalette(){
             }
             colorsPalete.push(secondColor);
         }else{
-            colorsPalete.push(getRandomPantone());
+
+            var secondColor = getRandomPantone();
+            while(hexColorDelta(colorsPalete[1]['hex'],secondColor['hex'])<0.8){
+                secondColor = getRandomPantone();
+            }
+            colorsPalete.push(secondColor);
+
+            //colorsPalete.push(getRandomPantone());
         }
+        
+        /*else{
+
+            var colors = tinycolor(colorsPalete[i-1]['hex']).splitcomplement(result=3);
+
+            var colorsmap = colors.map(function(t) { return t.toHex(); });
+
+            console.log(colorsmap[0]);
+            var tirdColor = {
+                "name": "xxxx",
+                "hex": colorsmap[1]
+            };
+            colorsPalete.push(tirdColor);
+
+        }*/
     }
     return colorsPalete;
+
+
+    /*
+    //API
+    var colorsPalete = [];
+    colorsPalete.push(getRandomPantone());
+
+    $.ajax({
+        type: "GET",
+        url: "https://www.thecolorapi.com/scheme?hex="+colorsPalete[0]['hex']+"&mode=complement&count=2",
+  
+        cache: false,
+        success: function(data){
+           //console.log(data);
+
+           colorsPalete.push({
+                            "name": "xxxx",
+                            "hex": data.colors[0]['hex']['clean']
+                        });
+
+
+            console.log(colorsPalete);
+        }
+      });
+      */
 }
 
 //50% de obtener verdadero
